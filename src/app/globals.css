@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #3b82f6;
+  --secondary: #2563eb;
+  --accent: #60a5fa;
+  --bg: #0a0f1a;
+  --text: #f8fafc;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #3b82f6, #60a5fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass {
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.glow {
+  box-shadow: 0 0 40px #3b82f640, 0 0 80px #3b82f620;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+.float { animation: float 6s ease-in-out infinite; }
